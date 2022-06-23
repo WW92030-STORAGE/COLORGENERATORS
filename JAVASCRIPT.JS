@@ -4,9 +4,13 @@ function primagen() {
     return rgb;
 }
 
+function pad(s) {
+    while (s.length() < 6) s = "0" + s;
+}
+
 function rgbString(arr) {
     var res = 256 * arr[0] + 16 * arr[1] + arr[2];
-    return "#" + res.toString(16);
+    return "#" + pad(res.toString(16));
 }
 
 function protogen() {
