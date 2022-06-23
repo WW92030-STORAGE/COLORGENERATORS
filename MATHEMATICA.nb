@@ -1,0 +1,21 @@
+PrimagenReal[] := Return[{Random[], Random[], Random[]}]
+
+PrimagenDiscrete[] := Return[RandomInteger[{0, 255}, 3] / 255]
+
+Pad[x_String] := Return[If[StringLength[x] > 1, x, StringJoin["0", x]]]
+
+ConvString[arr_] := (red = IntegerString[arr[[1]], 16];
+  green = IntegerString[arr[[2]], 16];
+  blue = IntegerString[arr[[3]], 16];
+  Return[StringJoin["#", Pad[red], Pad[green], Pad[blue]]])
+
+Protogen[] := Return[ConvString[PrimagenDiscrete[] * 255]]
+
+Inv[arr_] := Return[1 - arr]
+
+col0 = PrimagenDiscrete[];
+col1 = ConvString[Inv[col0] * 255]
+col2 = ConvString[col0 * 255]
+
+Plot[x, {x, -2, 2}, PlotStyle -> {{Thickness[0.01], RGBColor[col1]}}]
+Plot[x, {x, -2, 2}, PlotStyle -> {{Thickness[0.01], RGBColor[col2]}}]
