@@ -1,2 +1,2 @@
 # COLORGENERATORS
-Random color generators.
+Random color generators in various programming languages.
