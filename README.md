@@ -1,2 +1,2 @@
-# COLOR GENERATORS
+# COLORGENERATORS
 Random color generators.
