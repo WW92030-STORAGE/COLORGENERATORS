@@ -24,3 +24,5 @@ function inv(arr) {
 function setbg(color) {
     document.body.style.background = color;
 }
+
+// http://notasmr.epizy.com/common/misc/isexample/colors.htm
