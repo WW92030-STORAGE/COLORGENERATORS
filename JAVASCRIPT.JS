@@ -6,6 +6,7 @@ function primagen() {
 
 function pad(s) {
     while (s.length() < 6) s = "0" + s;
+    return s;
 }
 
 function rgbString(arr) {
