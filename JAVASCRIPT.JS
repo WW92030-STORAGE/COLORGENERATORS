@@ -10,7 +10,7 @@ function pad(s) {
 }
 
 function rgbString(arr) {
-    var res = 256 * arr[0] + 16 * arr[1] + arr[2];
+    var res = 256 * 256 * arr[0] + 256 * arr[1] + arr[2];
     return "#" + pad(res.toString(16));
 }
 
@@ -27,5 +27,3 @@ function setbg(color) {
 }
 
 // http://notasmr.epizy.com/common/misc/isexample/colors.htm
-
-console.log(protogen())
