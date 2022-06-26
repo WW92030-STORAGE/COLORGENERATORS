@@ -5,7 +5,7 @@ function primagen() {
 }
 
 function pad(s) {
-    while (s.length() < 6) s = "0" + s;
+    while (s.length < 6) s = "0" + s;
     return s;
 }
 
@@ -27,3 +27,5 @@ function setbg(color) {
 }
 
 // http://notasmr.epizy.com/common/misc/isexample/colors.htm
+
+console.log(protogen())
