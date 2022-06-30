@@ -11,10 +11,11 @@ ConvString[arr_] := (red = IntegerString[arr[[1]], 16];
 
 Protogen[] := Return[ConvString[PrimagenDiscrete[]]]
 
-Inv[arr_] := Return[1 - arr]
+InvDiscrete[arr_] := Return[255 - arr]
+InvReal[arr_] := Return[1 - arr]
 
 col0 = PrimagenDiscrete[];
-col1 = ConvString[Inv[col0]]
+col1 = ConvString[InvDiscrete[col0]]
 col2 = ConvString[col0]
 
 Plot[x, {x, -2, 2}, PlotStyle -> {{Thickness[0.01], RGBColor[col1]}}]
